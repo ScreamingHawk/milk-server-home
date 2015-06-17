@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Michael Standen -- Full Stack Dev / Designer / DB Admin / Whatever -- @_MichaelStanden
+
+# THANKS
+
+    Kate Miller for being so lovely :)
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, Sass
+    jQuery, Modernizr
