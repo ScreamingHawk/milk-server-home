@@ -11,5 +11,7 @@
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3, Sass
+    HTML5, CSS3
+	Bootstrap, Sass
     jQuery, Modernizr
+	AWS S3
