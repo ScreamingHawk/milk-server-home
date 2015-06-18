@@ -1,5 +1,29 @@
+/* Globals
+-------------------------------------------------- */
+
+$sm: 768;
+$sm_px: $sm + "px";
+$md: 992;
+$md_px: $md + "px";
+$lg: 1200;
+$lg_px: $lg + "px";
+$xl: 1920;
+$xl_px: $xl + "px";
+
+@mixin bp($point){
+	@if $point == sm {
+		@media (min-width: $sm_px) { @content; }
+	}
+	@else if $point == md {
+		@media (min-width: $md_px) { @content; }
+	}
+	@else if $point == lg {
+		@media (min-width: $lg_px) { @content; }
+	}
+}
+
 $img_prefix: "../img/";
-$icon_prefix: $img_prefix + "hex-social-media-icons/png/48x48/";
+
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -28,7 +52,20 @@ body {
 
 
 body.dark {
-	background-image: url($img_prefix + "background1920.png");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center 0;
+	background-color: #333;
+	background-image: url($img_prefix + "background" + $sm + ".png");
+	@include bp(sm){
+		background-image : url($img_prefix + "background" + $md + ".png")
+	}
+	@include bp(md){
+		background-image : url($img_prefix + "background" + $lg + ".png")
+	}
+	@include bp(lg){
+		background-image : url($img_prefix + "background" + $xl + ".png")
+	}
 }
 
 $white: #eee;
