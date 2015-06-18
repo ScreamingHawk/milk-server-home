@@ -19,13 +19,6 @@ body.dark {
   background-image: url("../img/background1920.png"); }
 
 .dark h1, .dark h2, .dark h3, .dark h4, .dark p, .dark span {
-  color: #eeeeee; }
+  color: #eee; }
 
-/* Icons
--------------------------------------------------- */
-.hexicon {
-  background-repeat: no-repeat;
-  width: auto;
-  height: auto;
-  margin: 0;
-  padding: 0; }
+/*# sourceMappingURL=main.css.map */
