@@ -1,0 +1,40 @@
+$img_prefix: "../img/";
+$icon_prefix: $img_prefix + "hex-social-media-icons/png/48x48/";
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+$footer-height: 60px;
+
+html,
+body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto (-$footer-height);
+  padding: 0 0 $footer-height;
+}
+
+#footer {
+  height: $footer-height;
+}
+
+
+/* Dark styles
+-------------------------------------------------- */
+
+
+body.dark {
+	background-image: url($img_prefix + "background1920.png");
+}
+
+$white: #eee;
+
+.dark {
+	h1, h2, h3, h4, p, span{
+		color: $white;
+	}
+}
