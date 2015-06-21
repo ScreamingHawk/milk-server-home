@@ -29,12 +29,12 @@
 				<div class="row">
 					<div class="col-lg-4 col-sm-3 col-xs-hidden"></div>
 					<div class="col-lg-4 col-sm-6 col-xs-12 text-center">
-						<img src="img/dp.jpg" class="img-responsive img-circle" style="margin: 0 auto;"></img>
+						<img src="img/dp.png" class="img-responsive img-circle" style="margin: 0 auto;"></img>
 						<h1>Michael Standen</h1>
 						<h3>Full Stack Developer</h3>
 						<div class="lead">
 							<span>
-								<a href="https://twitter.com/_MichaelStanden"><i class="fa fa-twitter"></i></a>
+								<a href="" onclick="$('#twitterCol').toggleClass('hidden'); return false;"><i class="fa fa-twitter"></i></a>
 								&bull;
 								<a href="https://github.com/ScreamingHawk"><i class="fa fa-github"></i></a>
 								&bull;
@@ -49,6 +49,14 @@
 					</div>
 					<div class="col-lg-4 col-sm-3 col-xs-hidden"></div>
 				</div>
+				<div class="row">
+					<div class="col-lg-4 col-sm-3 col-xs-hidden"></div>
+					<div id="twitterCol" class="col-lg-4 col-sm-6 col-xs-12 hidden text-center">
+						<a href="https://twitter.com/_MichaelStanden" class="twitter-timeline" data-widget-id="612676362067963904"><span>Loading Tweets by </span>@_MichaelStanden <span class="animate-hellip">&hellip;<span></a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					</div>
+					<div class="col-lg-4 col-sm-3 col-xs-hidden"></div>
+				</div>
 			</div>
 		</div>
 		
@@ -58,18 +66,18 @@
 					<p>&copy; Michael Standen <script>document.write(new Date().getFullYear());</script></p>
 				</div>
 				<div class="col-sm-6">
-					<p class="text-right hidden">
+					<p class="text-right">
 						<a href="https://www.changetip.com/tipme/michaelstanden"><i class="fa fa-btc"></i> Bitcoin</a>
 					</p>
 				</div>
-				<p><a class="hidden" href="http://www.awicons.com/">Icons by Lokas Software</a></p>
 			</div>
 		</footer>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
 		<script src="js/vendor/bootstrap.min.js"></script>
 
+		<script src="js/animate-hellip.js"></script>
 		<script src="js/main.js"></script>
 
 		<script>
