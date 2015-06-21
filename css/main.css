@@ -15,6 +15,11 @@ body {
 #footer {
   height: 60px; }
 
+/* Hellip
+-------------------------------------------------- */
+.animate-hellip {
+  position: absolute; }
+
 /* Dark styles
 -------------------------------------------------- */
 body.dark {

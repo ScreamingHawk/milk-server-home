@@ -1,1 +1,1 @@
-
+$('.animate-hellip').animateHellip();
