@@ -1,0 +1,120 @@
+<!doctype html>
+<!--[if lt IE 7]>	  <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>		 <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>		 <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Michael Standen - Art</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/main.css">
+
+		<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+	</head>
+	<body class="dark">
+		<!--[if lt IE 8]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		<div id="wrap">
+			<div class="container-fluid" style="margin-bottom: 50px;">
+				<h1 style="text-align: center;">Art</h1>
+				<div class="row">
+					<div class="col-lg-12 col-sm-12">
+						<div class="thumbnail">
+							<img class="full" src="sakamoto_export.svg" onerror="this.src='sakamoto.png';this.onerror=null;">
+							<div class="caption">
+								<h3>Sakamoto</h3>
+								<p>
+									A wallpaper of <a href="http://nichijou.wikia.com/wiki/Sakamoto"><ruby>坂本<rp>(</rp><rt>さかもと</rt><rp>)</rp></ruby> (Sakamoto)</a> from <a href="http://myanimelist.net/anime/10165/Nichijou"><ruby>日常<rp>(</rp><rt>にちじょう</rt><rp>)</rp> (Nichijou)</ruby></a>. 
+								</p>
+								<p>
+									I'm always looking for nice wallpapers to add to my collection, but I couldn't find one of Sakamoto with the quality I wanted. 
+									I also wanted to try my hand at vectoring again, so I decided to give it a try. 
+									I used <a href="https://inkscape.org/en/">Inkscape</a> and while I did have some trouble with crashes, it performed quite well! 
+									Although I don't consider myself an artist or even an imaginative person, I'm quite happy with how this turned out. 
+								</p>
+								<p class="small">
+									<a href="http://fav.me/d994rjs">DeviantArt Link</a>
+									<br/>
+									10<sup>th</sup> September 2016
+									<br/>
+									This work is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-sm-12">
+						<div class="thumbnail">
+							<button id="nsfw1Button" type="button" class="btn btn-danger" style="margin: 20px auto 0; display: block;" onclick="nsfw(1);">NSFW Warning!</button>
+							<img id="nsfw1" class="full hidden" src="embarrassed_export.svg" onerror="this.src='embarrassed.png';this.onerror=null;">
+							<div class="caption">
+								<h3>Embarrassed Anime Girl</h3>
+								<p>
+									A vector of an Embarrassed Anime Girl
+								</p>
+								<p>
+									Since the Sakamoto wallpaper, I thought I'd try doing an anime character that is less flat. 
+									I stumbled across the <a href="https://danbooru.donmai.us/posts/1494934?tags=takakamo_shizuno_(cosplay)">original sketch</a> and saw an opportunity to test my skills. 
+									I used <a href="https://inkscape.org/en/">Inkscape</a> again and figured out that the crashing would happen when I used Ctrl+Scroll when the mouse was over a node. Save often! 
+									<br/>
+									I tried some shadows on the body using the blur feature in inkscape. I had some issues where I wanted to retain the transparent background but the blur would go outside the body, and haven't managed to figure it out. Please comment on the DeviantArt link if you know how! 
+								</p>
+								<p class="small">
+									<a href="http://fav.me/d9ajh7l">DeviantArt Link</a>
+									<br/>
+									23<sup>rd</sup> September 2016
+									<br/>
+									This work is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<footer id="footer">
+			<div class="container">
+				<div class="col-sm-6">
+					<p>&copy; Michael Standen <script>document.write(new Date().getFullYear());</script></p>
+				</div>
+				<div class="col-sm-6">
+					<p class="text-right">
+						<a href="https://www.changetip.com/tipme/michaelstanden"><i class="fa fa-btc"></i> Bitcoin</a>
+					</p>
+				</div>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+		<script src="js/vendor/bootstrap.min.js"></script>
+
+		<script src="js/animate-hellip.js"></script>
+		<script src="js/main.js"></script>
+		
+		<script>
+			function nsfw(item){
+			console.log($('nsfw'+item));
+				$('#nsfw'+item).removeClass('hidden');
+				$('#nsfw'+item+'Button').addClass('hidden');
+			}
+		</script>
+
+		<script>
+			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+			e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+			e.src='//www.google-analytics.com/analytics.js';
+			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+			ga('create','64252817-1','auto');ga('send','pageview');
+		</script>
+	</body>
+</html>
