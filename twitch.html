@@ -30,9 +30,18 @@
 					<div class="col-lg-6 col-xs-12 text-center">
 						<img id="offlineImage" class="hidden" src="img/twitchoffline.jpg" style="width: 100%;" />
 						<div id="vidPanel">
-							<iframe id="twitchPlayer" style="width: 100%;" src="http://player.twitch.tv/?html5&channel=milkytaste" frameborder="0" autoplay></iframe>
+							<object id="twitchPlayer" type="application/x-shockwave-flash" style="width: 100%; background-color: #333;" data="http://www.twitch.tv/widgets/live_embed_player.swf?channel=milkytaste">
+								<param name="allowFullScreen" value="true" />
+								<param name="allowScriptAccess" value="always" />
+								<param name="allowNetworking" value="all" />
+								<param name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" />
+								<param name="flashvars" value="hostname=www.twitch.tv&channel=milkytaste&auto_play=true" />
+							</object>
 						</div>
-						<iframe frameborder="0" src="http://twitch.tv/MilkyTaste/chat?popout=" style="margin-top: 10px; width: 100%; height: 300px;"></iframe>
+						<iframe frameborder="0" src="http://twitch.tv/MilkyTaste/chat?popout=" style="margin-top: 10px; width: 100%; height: 300px; background-color: #333;"></iframe>
+						<div>
+							<p>Change player to <a id="switchPlayerLink" href="">HTML5</a></p>
+						</div>
 					</div>
 					<div class="col-lg-3 col-xs-hidden"></div>
 				</div>
@@ -59,32 +68,8 @@
 
 		<script src="js/animate-hellip.js"></script>
 		<script src="js/main.js"></script>
+		<script src="js/twitch.js"></script>
 		
 		<script src="js/g-analytics.js"></script>
-		
-		<script>
-			function resizePlayer(){
-				var p = $('#twitchPlayer');
-				p.height(p.width()*10/16);
-				console.log(p);
-			}
-			
-			$(document).ready(function(){
-				$.getJSON('https://api.twitch.tv/kraken/streams/milkytaste', function(channel){
-					$('#twitchPlayer').remove();
-					if (!channel["stream"] == null && Modernizr.video){
-						$('#vidPanel').append('<iframe id="twitchPlayer" style="width: 100%;" src="http://player.twitch.tv/?html5&channel=milkytaste" frameborder="0" autoplay></iframe>');
-						resizePlayer();
-					} else if (swfobject.hasFlashPlayerVersion("1")){
-						$('#vidPanel').append('<object id="twitchPlayer" type="application/x-shockwave-flash" style="width: 100%;" data="http://www.twitch.tv/widgets/live_embed_player.swf?channel=milkytaste"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" /><param name="flashvars" value="hostname=www.twitch.tv&channel=milkytaste&auto_play=true" /></object>');
-						resizePlayer();
-					} else if (channel["stream"] == null) {
-						$('#offlineImage').removeClass('hidden');
-					} else {
-						$('#vidPanel').append("<h1>I'm LIVE!</h1><p class='lead'>But your browser does not support HTML5 video or flash :(</p>");
-					}
-				});
-			});
-		</script>
 	</body>
 </html>
